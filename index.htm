@@ -1,0 +1,408 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Karubo's ROI - Pendoria TS Calculator</title>
+  <meta name="description" content="Pendoria TS Calculator">
+  <meta name="author" content="Karubo & Furious AS">
+
+  <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+  <script src="js/formulas.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/calculations.js"></script>
+  <table class="globaltable" id="globaltable">
+    <tr>
+      <td colspan=2 align=center>
+        <b>Added a new mouseover to the equipment slot column showing at which score would be an upgrade with and without embellished.</b>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Save in Cookie:
+        <select id="cookie">
+          <option selected value=false>
+            No
+          </option>
+          <option value=true>
+            Yes
+          </option>
+        </select>
+      </td>
+      <td>
+        Multiplier:
+        <select id="multiplier">
+          <option selected value=1>
+            Normal
+          </option>
+          <option value=2>
+            Double
+          </option>
+          <option value=3>
+            Triple
+          </option>
+          <option value=4>
+            Quadruple
+          </option>
+          <option value=5>
+            Quintuple
+          </option>
+          <option value=6>
+            Sextuple
+          </option>
+          <option value=7>
+            Septuple
+          </option>
+          <option value=8>
+            Octuple
+          </option>
+          <option value=9>
+            Nonuple
+          </option>
+          <option value=10>
+            Decuple
+          </option>
+          <option value=11>
+            Undecuple
+          </option>
+          <option value=12>
+            Duodecuple
+          </option>
+          <option value=13>
+            Tredecuple
+          </option>
+          <option value=14>
+            Quattuordecuple
+          </option>
+          <option value=15>
+            Quindecuple
+          </option>
+          <option value=16>
+            Sexdecuple
+          </option>
+          <option value=17>
+            Septendecuple
+          </option>
+          <option value=18>
+            Octodecuple
+          </option>
+          <option value=19>
+            Novemdecuple
+          </option>
+          <option value=20>
+            Viguple
+          </option>
+        </select>
+         Global Drop:
+         <input type=checkbox id="globaldrop" />
+      </td>
+    </tr>
+    <tr>
+      <td id="inputs" class="singleTDBorder">
+        <table id="inputtable">
+          <tr>
+            <td>
+              Level
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Level" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2>
+              <b>SP Boosts</b>
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td colspan=2>
+              <b>Rhodium Boosts</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Quint %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Quint" />
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              Drop Boost %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Dropboost" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              TS Boost %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="TSBoost" />
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              SP Boost %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="SPBoost" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2>
+              <b>Scraptown</b>
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td colspan=2>
+              <b>Guild Buildings</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Scrapyard
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Scrapyard" />
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              Trading Post
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Tradingpost" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Armory
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Armory" />
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              Refinery
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Refinery" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              Wishing Well
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Wishingwell" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2>
+              <b>Invasion Shop</b>
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td colspan=2>
+              <b>Dungeon Tools</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Equip Drop Chance %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Invasionequip" />
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              Satchel %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Satchel" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              SP Drop Chance %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Invasionspchance" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              SP Drop Amount %
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Invasionspamount" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2>
+              <b>Prices</b>
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td colspan=2>
+              <b>Actions per Day</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Ress
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Ressprice" />
+            </td>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="ActionsDay" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Spare Parts
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="SPprice" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Rhodium
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Rhodiumprice" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Cogs
+            </td>
+            <td>
+              <input type="text" size=5 name="inputs[]" id="Cogprice" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td valign=top id="calculations" rowspan=2>
+        Test
+      </td>
+    </tr>
+    <tr>
+      <td id="equipment" align=center class="singleTDBorder">
+        <table id="equipmentlist">
+          <tr>
+            <th colspan=9 align=center>
+              <b>Equipement</b>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              Slot
+            </th>
+            <th>
+              Level
+            </th>
+            <th>
+              Armory
+            </th>
+            <th>
+              Rarity
+            </th>
+            <th>
+              Set Bonus
+            </th>
+            <th>
+              Stat 1
+            </th>
+            <th>
+              Stat 2
+            </th>
+            <th>
+              Stat 3
+            </th>
+            <th>
+              Slotlvl
+            </th>
+          </tr>
+        </table>
+        <table id="importtable">
+          <tr>
+            <td align=center>
+              <input type=button size=5 id="equipimportbtn" value="Import Equip" />
+            </td>
+          </tr>
+          <tr>
+            <td valign=top align=center>
+              <div style="display:none" id="equipimport">
+                <div>
+                  <textarea cols=15 rows=5 id="equipimporttext"></textarea>
+                </div>
+                <div>
+                  Copy item view from "Equipped" to "[Link in chat]"<br />
+                  <img src="img/item.png" />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <script> window.onload = loaded();</script>
+</body>
+</html>
