@@ -1,59 +1,89 @@
 body {
-  background-color: lightgrey;
+    background-color: lightgrey;
 }
 
 table, th, tr, td {
-  border: 0px solid black;
-  border-collapse: collapse;
-  padding: 2px;
+    border: 0px solid black;
+    border-collapse: collapse;
+    padding: 2px;
 }
 
-#globaltable tr{
-  border: 1px solid black;
+#globaltable tr {
+    border: 1px solid black;
 }
 
 .othertables table, .othertables th, .othertables tr, .othertables td {
-  border: 1px solid black;
-  border-collapse: collapse;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 .othertables th, .othertables td {
-  padding: 5px;
+    padding: 5px;
 }
 
 .othertables tr:nth-child(even) {
-  background-color: #9298a1;
+    background-color: #9298a1;
 }
 
 .othertables tr:hover {
-  background-color: #3d3c3c;
-  color: white;
+    background-color: #3d3c3c;
+    color: white;
 }
 
 .othertables th {
-  background-color: #092551;
-  color: white;
+    background-color: #092551;
+    color: white;
 }
 
 .singleTDBorder {
-  border: 1px solid black;
-  border-collapse: collapse;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
+
 #inputtable table, #inputtable th, #inputtable tr, #inputtable td {
-  border: 0px solid black;
+    border: 0px solid black;
 }
 
 #equipmentlist table, #equipmentlist th, #equipmentlist tr, #equipmentlist td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
 }
 
 #equipmentlist th {
-  background-color: #092551;
-  color: white;
+    background-color: #092551;
+    color: white;
 }
 
 #equipmentlist tr:nth-child(even) {
-  background-color: #9298a1;
+    background-color: #9298a1;
+}
+
+#header {
+
+    display: block;
+    position: relative;
+
+    width: 100%;
+
+    border-bottom:  1px solid gray;
+
+    padding: 8px 0;
+    padding-bottom: 12px;
+
+    margin-bottom: 12px;
+
+}
+
+#header .inner {
+
+    display: grid;
+    grid-template-columns: auto max-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: calc(100% - 40px);
+    max-width: 1200px;
+
 }
